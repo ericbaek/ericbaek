@@ -1,11 +1,15 @@
-# Eric Baek
+# Eric Baek · Software Engineer
 
-I lead development and operations for **Musecat**, a community directory for arcade players that I’ve run for over three years. It launched in June 2023 with 45 arcades so players could find out which venues had the games they wanted to play. Players now use it to find cabinets, correct listings, and report broken machines.
+I lead **Musecat**, a community platform where players find arcade games and report broken machines. I’ve run it for **over three years**, growing the directory from **45 arcades at launch in June 2023 to 3,264**. I built both Go backends myself and co-developed the TypeScript web app with a web designer.
 
-By **14 November 2026**, Musecat listed **3,264 arcades** and had recorded **21,226 edits** and **2,091 fault reports**. Its pages received **1.62 million views** between 28 February 2026, when view tracking began, and 14 November. [Explore Musecat](https://musecat.app/en) · [Read the development history](https://musecat.app/en/community/updates)
+| Page views | Directory edits | Machine fault reports |
+| --- | --- | --- |
+| **1.62 million** since 28 Feb 2026 | **21,226** | **2,091** |
 
-I designed and developed both Go backends on my own. **Backend Core** implements the public API and editing rules. **Backend Full** runs the production service and handles migrations for the live database. A web designer and I co-developed the **TypeScript frontend** that players use.
+Figures as of 14 Nov 2026. [Explore Musecat](https://musecat.app/en) · [Follow its development from launch](https://musecat.app/en/community/updates)
 
-One design decision came directly from running a shared directory. If someone moves a cabinet from the first floor to the second, another player saving an older listing could erase that correction. Musecat keeps the earlier revision, records who changed it, and detects the stale edit. [Read the regression test](https://github.com/ericbaek/Musecat-Backend-Core/commit/624a8b244164e358b383b48d78417488eec857b3)
+### Engineering decisions from running Musecat
 
-Two more examples from the backend are [keeping XP consistent when a post is deleted](https://github.com/ericbaek/Musecat-Backend-Core/pull/42) and [separating the public API from production migrations](https://github.com/ericbaek/Musecat-Backend-Core/blob/main/docs/architecture-contract.md).
+- **Protecting community edits.** If one player moves a cabinet listing from 1F to 2F, saving an older version could erase that correction. The API detects the stale edit and keeps a history of who changed what. [Read the Go regression test](https://github.com/ericbaek/Musecat-Backend-Core/commit/624a8b244164e358b383b48d78417488eec857b3)
+- **Keeping rewards consistent.** Deleting a post should revoke its XP exactly once. If deletion fails, the XP change rolls back too. [Review the implementation and tests](https://github.com/ericbaek/Musecat-Backend-Core/pull/42)
+- **Shipping changes to a live database.** Backend Core defines the API and its rules. Backend Full pins a tested Core version and owns production migrations, so I can evolve the public API and control when a change reaches existing data. [Read the architecture contract](https://github.com/ericbaek/Musecat-Backend-Core/blob/main/docs/architecture-contract.md)
