@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="148" viewBox="0 0 460 148" role="img" aria-labelledby="title desc">
+  <title id="title">Public GitHub activity · @ericbaek</title>
+  <desc id="desc">2026 year to date. 206 commit contributions and 44 pull requests opened.</desc>
+  <rect x="0.5" y="0.5" width="459" height="147" rx="12" fill="#0d1117" stroke="#3d4855"/>
+  <g font-family="system-ui, sans-serif">
+    <text x="22" y="31" fill="#f0f6fc" font-size="17" font-weight="600">GitHub activity</text>
+    <text x="438" y="31" text-anchor="end" fill="#b6c2cf" font-size="12">@ericbaek</text>
+    <path d="M22 46h416 M232 59v46" fill="none" stroke="#303b47"/>
+    <g fill="#7ee2a8" font-size="29" font-weight="650">
+      <text x="22" y="83">206</text>
+      <text x="254" y="83">44</text>
+    </g>
+    <g fill="#e6edf3" font-size="13">
+      <text x="22" y="104">Commit contributions</text>
+      <text x="254" y="104">Pull requests opened</text>
+    </g>
+    <text x="22" y="132" font-size="12" fill="#b6c2cf">Public repositories · 1 Jan – 13 Nov 2026 UTC</text>
+  </g>
+</svg>

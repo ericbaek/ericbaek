@@ -11,6 +11,8 @@ I’ve led development and run **Musecat** since its launch in June 2023. Player
 
 As of 14 Nov 2026. Page views counted since 28 Feb 2026. [Explore Musecat](https://musecat.app/en) · [Three years of releases](https://musecat.app/en/community/updates)
 
+[![GitHub stats card showing my public commit contributions and pull requests opened this year](./github-activity.svg)](https://github.com/ericbaek?tab=overview)
+
 ### Inside the backend
 
 - **When two players edit the same cabinet.** If one moves it from floor 1 to floor 2, the API catches a later save based on the old listing. The test checks both the conflict and the edit history. [Read the Go test](https://github.com/ericbaek/Musecat-Backend-Core/blob/624a8b244164e358b383b48d78417488eec857b3/tests/arcade/game_state_v2_test.go#L41-L105)
