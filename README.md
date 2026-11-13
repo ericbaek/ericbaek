@@ -1,6 +1,6 @@
 # Software engineer & project lead at Musecat
 
-I’ve led development and run **Musecat** since its launch in June 2023. Players use it to find a game near them, update cabinet listings, and report faults. The directory started with **45 arcades**.
+I’ve led development and operations for **Musecat** since June 2023, when we launched with **45 arcade listings**. By November 2026, our community-run wiki covered **3,264 arcades worldwide**. Our goal is to build **Asia’s largest arcade wiki**, where players can find the games they want to play and share up-to-date information about each venue.
 
 **Backend** · I designed and built both Go backends on my own. Core handles the API and edit history. Full runs the production service and migrates the live database.  
 **Frontend** · A web designer and I co-developed the TypeScript web app players use.
